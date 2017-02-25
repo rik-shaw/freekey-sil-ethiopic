@@ -28,14 +28,16 @@ begin
 end;
 
 [Setup]
-OutputBaseFilename=FreeKey SIL Ethiopic Keyboard
-AppName=SIL Ethiopic
-AppVerName=SIL Ethiopic Version 2.0
+OutputBaseFilename=FreeKey SIL Ethiopic Keyboard v-2-0
+AppName=SIL Ethiopic Keyboard
+AppVersion=2.0
+AppVerName=SIL Ethiopic Keyboard Version 2.0
 DefaultDirName={pf}\FreeKey
 DefaultGroupName=FreeKey
 UninstallDisplayName=FreeKey SIL Ethiopic Keyboard
 AppPublisher=SIL Ethiopia
 AppPublisherURL=http://www.silethiopia.org/
+AppCopyright=(c) SIL Ethiopia
 DirExistsWarning=No
 
 [Files]
