@@ -79,7 +79,7 @@ GroupBasicMatrix =
     $C$# ,U+2db8 ,U+2db9 ,U+2dba ,U+2dbb ,U+2dbc ,U+2dbd ,U+2dbe ,U+2db8 ,U+2db8 ,U+2db8 ,U+2db8 ,U+2db8 ,U+2db8 ,U+2dbd |
     $q$# ,U+2dc0 ,U+2dc1 ,U+2dc2 ,U+2dc3 ,U+2dc4 ,U+2dc5 ,U+2dc6 ,U+2dc0 ,U+2dc0 ,U+2dc0 ,U+2dc0 ,U+2dc0 ,U+2dc0 ,U+2dc5 |
     $k$# ,U+2dc8 ,U+2dc9 ,U+2dca ,U+2dcb ,U+2dcc ,U+2dcd ,U+2dce ,U+2dc8 ,U+2dc8 ,U+2dc8 ,U+2dc8 ,U+2dc8 ,U+2dc8 ,U+2dcd |
-    $H$# ,U+2dd0 ,U+2dd1 ,U+2dd2 ,U+2dd3 ,U+2dd4 ,U+2dd5 ,U+2dd6 ,U+2dd0 ,U+2dd0 ,U+2dd0 ,U+2dd0 ,U+2dd0 ,U+2dd0 ,U+2dd5 |
+    $K$# ,U+2dd0 ,U+2dd1 ,U+2dd2 ,U+2dd3 ,U+2dd4 ,U+2dd5 ,U+2dd6 ,U+2dd0 ,U+2dd0 ,U+2dd0 ,U+2dd0 ,U+2dd0 ,U+2dd0 ,U+2dd5 |
     $g$# ,U+2dd8 ,U+2dd9 ,U+2dda ,U+2ddb ,U+2ddc ,U+2ddd ,U+2dde ,U+2dd8 ,U+2dd8 ,U+2dd8 ,U+2dd8 ,U+2dd8 ,U+2dd8 ,U+2ddd |
     $C$= ,U+ab20 ,U+ab21 ,U+ab22 ,U+ab23 ,U+ab24 ,U+ab25 ,U+ab26 ,U+ab20 ,U+ab20 ,U+ab20 ,U+ab20 ,U+ab20 ,U+ab20 ,U+ab25 |
     $P$= ,U+ab28 ,U+ab29 ,U+ab2a ,U+ab2b ,U+ab2c ,U+ab2d ,U+ab2e ,U+ab28 ,U+ab28 ,U+ab28 ,U+ab28 ,U+ab28 ,U+ab28 ,U+ab2d |
