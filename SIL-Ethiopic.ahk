@@ -1,11 +1,12 @@
 ﻿;========================================================
 ;      SIL Ethiopic
 ;========================================================
-;version 2.0.1 2017-02-26: changing diacritic trigger
-;    to match keyman ("." preceding number)
 ;version 2.0   2017-02-15: updated from legacy Ethiopic
 ;    Freekey ahk file: adding "[" alternate key sequence
 ;    for less common fidel characters.
+;version 2.0.1 2017-02-26: changing diacritic trigger
+;    to match keyman ("." preceding number)
+;version 2.0.2 2017-05-17: adding saho characters U+223c and U+a78c
 ;
 ;Do not change this:
 #include BasicRoutines.ahk
@@ -36,8 +37,7 @@ MatrixMarker := ","
 ; Every keyvalue must be unique within the matrix and must not be repeated
 ; fill in "dead spots" in matrix with default value
 GroupBasicMatrix =
-(   ;     v       u       i       a       e       -       o       O       A       W       I       E       V       M      |
-    $]   ,U+005d ,U+005d ,U+005d ,U+005d ,U+005d ,U+005d ,U+005d ,U+005d ,U+005d ,U+005d ,U+005d ,U+005d ,U+005d ,U+005d |
+(   ;     v       u       i       a       e       -       o       O       A       U       I       E       W       M      |
     $[   ,U+005b ,U+005b ,U+005b ,U+005b ,U+005b ,U+005b ,U+005b ,U+005b ,U+005b ,U+005b ,U+005b ,U+005b ,U+005b ,U+005b |
     $#   ,U+0023 ,U+0023 ,U+0023 ,U+0023 ,U+0023 ,U+0023 ,U+0023 ,U+0023 ,U+0023 ,U+0023 ,U+0023 ,U+0023 ,U+0023 ,U+0023 |
     $=   ,U+003d ,U+003d ,U+003d ,U+003d ,U+003d ,U+003d ,U+003d ,U+003d ,U+003d ,U+003d ,U+003d ,U+003d ,U+003d ,U+003d |
@@ -128,13 +128,13 @@ GroupEqual = ( $C $P $s $z $D )
 
 ; Used with InGroup(group)
 ; It is just checked if a value is within a specified group
-GroupDeadKey = ( $R $U )
+GroupDeadKey = ( $R )
 
 ; Used with InGroup(group)
 ; It is just checked if a value is within a specified group
-GroupPunctuation = ( $< $> $- $. $: $; $, $/ $) $' $" )
+GroupPunctuation = ( $< $> $- $. $: $; $, $/ $) $' $" $~ $| )
 
-GroupPunctEx = ( $. U+1362|  $: U+1361|  $, U+1365|  $; U+1364| )
+GroupPunctEx = ( $. U+1362|  $: U+1361|  $, U+1365|  $; U+1364|  $~ U+223c|  $| U+223c| )
 
 ; Used with ReplaceDoubleKey(group)
 ; Value: LastOutput(LO) followed by InputKey(K) results to newValue(nV)
@@ -147,6 +147,7 @@ GroupPunctD =
       $> $> U+00bb| |     $< $< U+00ab| |
       $> $" U+00bb| |     $< $" U+00ab| |
       $> $' U+203a| |     $< $' U+2039| |
+      $' $' U+a78c| |     U+a78c $' $'| |
 )
 
 ; Used with ReplaceDoubleKey(group)
@@ -245,7 +246,7 @@ KeyDown(which)
     MatrixKey := "&&&"  ; Assign nonsense value to matrix key to avoid unwanted modifications
   }
 
-  else if (which == "$W")
+  else if (which == "$U")
   {
     MatrixOut(GroupBasicMatrix, "", "", 10, 1)
     MatrixKey := "&&&"  ; Assign nonsense value to matrix key to avoid unwanted modifications
@@ -263,7 +264,7 @@ KeyDown(which)
     MatrixKey := "&&&"  ; Assign nonsense value to matrix key to avoid unwanted modifications
   }
 
-  else if (which == "$V")
+  else if (which == "$W")
   {
     MatrixOut(GroupBasicMatrix, "", "U+12d0", 13, 1)
     MatrixKey := "&&&"  ; Assign nonsense value to matrix key to avoid unwanted modifications
@@ -324,7 +325,7 @@ KeyDown(which)
     }
   }
 
- else if (LastOutput == "U+1362" && InGroup(GroupDiacriticTrigger, which))
+  else if (LastOutput == "U+1362" && InGroup(GroupDiacriticTrigger, which))
   {
     ReplaceDoubleKey(GroupDiacritic)
   }

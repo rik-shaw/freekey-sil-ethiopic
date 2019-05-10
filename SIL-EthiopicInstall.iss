@@ -28,10 +28,10 @@ begin
 end;
 
 [Setup]
-OutputBaseFilename=FreeKey SIL Ethiopic Keyboard v-2-0
+OutputBaseFilename=FreeKey SIL Ethiopic Keyboard v-2-0-2
 AppName=SIL Ethiopic Keyboard
-AppVersion=2.0
-AppVerName=SIL Ethiopic Keyboard Version 2.0
+AppVersion=2.0.2
+AppVerName=SIL Ethiopic Keyboard Version 2.0.2
 DefaultDirName={pf}\FreeKey
 DefaultGroupName=FreeKey
 UninstallDisplayName=FreeKey SIL Ethiopic Keyboard
@@ -370,3 +370,4 @@ begin
   AboutButton.OnClick := @AboutButtonOnClick;
   AboutButton.Parent := ParentForm;
 end;
+
